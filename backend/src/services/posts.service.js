@@ -1,7 +1,7 @@
 const { postModel } = require("../models");
 
 const getAllPosts = async () => {
-  const post = await postModel.getAllPost();
+  const post = await postModel.getAllPosts();
 
   return post;
 };
