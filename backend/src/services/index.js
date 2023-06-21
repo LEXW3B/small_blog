@@ -1,4 +1,4 @@
-const postService = require("./posts.service");
+const postService = require('./posts.service');
 
 module.exports = {
   postService,

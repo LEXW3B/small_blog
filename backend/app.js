@@ -1,13 +1,15 @@
 const express = require('express');
 const cors = require('cors');
+const postRoute = require('./src/router/postRoute');
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use('/posts', postRoute);
 
 app.get('/', (_req, res) => {
-    res.send();
+  res.send();
 });
 
 module.exports = app;
