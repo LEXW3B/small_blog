@@ -1,8 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './NavBar.css';
 
-const NavBar = () => {
+function NavBar() {
   return (
-    <div>NavBar</div>
+    <nav className="navbar">
+      <h2>
+        <Link to="/">DevBlog</Link>
+      </h2>
+      {/* <h4 className='bem-vindo'>{`Seja bem-vindo(a), ${JSON.parse(localStorage.getItem('login'))}`}</h4> */}
+      <ul>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/login'>Deslogar</Link>
+        </li>
+        <li>
+          <Link to='/new' className='new-btn'>Novo Post</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
