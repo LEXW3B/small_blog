@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import blogFetch from '../axios/config';
+import './Home.css';
 
 function Home() {
   const [posts, setPosts] = useState([]);

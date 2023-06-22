@@ -1,0 +1,41 @@
+.home h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+  padding: 1.5rem;
+  border-bottom: 1px solid #777;
+}
+
+.post h4,
+.post p {
+  margin-bottom: 1em;
+}
+
+.post h2 {
+  margin-bottom: .2rem;
+}
+
+p > span {
+  color: rgb(143, 138, 138);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post p {
+  color: #fff;
+  font-weight: 700;
+}
+
+.post h2::first-letter {
+  text-transform: uppercase;
+}
+
+.quebra-linha {
+  word-wrap: break-word;
+}
