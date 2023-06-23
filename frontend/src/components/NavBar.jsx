@@ -8,16 +8,16 @@ function NavBar() {
       <h2>
         <Link to="/">DevBlog</Link>
       </h2>
-      {/* <h4 className='bem-vindo'>{`Seja bem-vindo(a), ${JSON.parse(localStorage.getItem('login'))}`}</h4> */}
+      <h4 className="bem-vindo">{`Seja bem-vindo(a), ${JSON.parse(localStorage.getItem('login'))}`}</h4>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to='/login'>Deslogar</Link>
+          <Link to="/login">Deslogar</Link>
         </li>
         <li>
-          <Link to='/new' className='new-btn'>Novo Post</Link>
+          <Link to="/new" className="new-btn">Novo Post</Link>
         </li>
       </ul>
     </nav>

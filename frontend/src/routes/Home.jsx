@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import blogFetch from '../axios/config';
 import './Home.css';
 
 function Home() {
   const [posts, setPosts] = useState([]);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const getPosts = async () => {
     try {
@@ -19,7 +19,7 @@ function Home() {
   };
 
   useEffect(() => {
-    // if (!localStorage.getItem('login')) navigate('/login');
+    if (!localStorage.getItem('login')) navigate('/login');
     getPosts();
   }, []);
 
@@ -31,11 +31,11 @@ function Home() {
       ) : (posts.map((post) => (
         <div key={post.id} className="post">
           <h2>{post.title}</h2>
-          <p className='span-container'>
+          <p className="span-container">
             <span>{`${post.owner}`}</span>
             <span>{`${post.created_at}`}</span>
           </p>
-          <p className='quebra-linha'>
+          <p className="quebra-linha">
             {post.body.length > 120 ? `${post.body.substr(0, 120)}...` : post.body}
           </p>
         </div>
