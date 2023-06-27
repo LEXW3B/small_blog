@@ -5,7 +5,7 @@ function DeleteBtn({ post, deletePost }) {
   return (
     <div className="container-btn">
       {post.owner === JSON.parse(localStorage.getItem('login')) && (
-        <button type="button" onClick={() => deletePost(post.id)} className="btn delete">
+        <button type="button" onClick={() => deletePost(post.id)} className="btn-delete">
           Excluir
         </button>
       )}
