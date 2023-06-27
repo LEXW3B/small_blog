@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import blogFetch from '../axios/config';
+import '../css/routes/NewPost.css';
 
 function NewPost() {
   const [title, setTitle] = useState();
