@@ -6,6 +6,7 @@ import Home from './routes/Home';
 import NewPost from './routes/NewPost';
 import './css/base/index.css';
 import Login from './routes/Login';
+import ReadMore from './routes/ReadMore';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
+      },
+      {
+        path: '/posts/:id',
+        element: <ReadMore />,
       },
     ],
   },
