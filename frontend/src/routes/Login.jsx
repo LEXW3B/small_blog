@@ -1,20 +1,24 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/routes/Login.css';
+import MyContext from '../context/MyContext';
 
 function Login() {
   const [user, setUser] = useState();
   const navigate = useNavigate();
+  const { setOwner } = useContext(MyContext);
 
   function handleSubmit() {
-    localStorage.setItem('login', JSON.stringify(user));
     navigate('/');
+    setOwner(user);
+    // localStorage.setItem('login', JSON.stringify(user));
   }
 
-  useEffect(() => {
-    localStorage.clear();
-  }, []);
+  // useEffect(() => {
+  //   setOwner('');
+  //   localStorage.clear();
+  // }, []);
 
   return (
     <div className="login-container">

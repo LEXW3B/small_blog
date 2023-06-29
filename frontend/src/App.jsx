@@ -3,15 +3,18 @@ import { Outlet } from 'react-router-dom';
 import NavBar from './components/NavBar';
 
 import './css/base/App.css';
+import MyProvider from './context/Provider';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <div className="container">
-        <Outlet />
+    <MyProvider>
+      <div className="App">
+        <NavBar />
+        <div className="container">
+          <Outlet />
+        </div>
       </div>
-    </div>
+    </MyProvider>
   );
 }
 
