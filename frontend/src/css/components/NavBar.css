@@ -9,6 +9,11 @@
   opacity: 1;
 }
 
+.navbar h2 a:hover {
+  opacity: 0.7;
+  color: rgb(214, 19, 19);
+}
+
 .navbar ul {
   display: flex;
   gap: 1rem;

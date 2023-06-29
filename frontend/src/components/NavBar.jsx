@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/components/NavBar.css';
-
+// função para limpar o local storage e redirecionar para a pagina de login
 function NavBar() {
   return (
     <nav className="navbar">
       <h2>
         <Link to="/">DevBlog</Link>
       </h2>
-      <h4 className="bem-vindo">{`Seja bem-vindo(a), ${JSON.parse(localStorage.getItem('login'))}`}</h4>
+      <h4 className="bem-vindo">{`Welcome ${JSON.parse(localStorage.getItem('login'))}`}</h4>
       <ul>
         <li>
           <Link to="/">Home</Link>

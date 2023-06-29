@@ -4,9 +4,9 @@ import blogFetch from '../axios/config';
 import '../css/routes/NewPost.css';
 
 function NewPost() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
-  const navigate = useNavigate();
   const owner = JSON.parse(localStorage.getItem('login'));
 
   const createPost = async (e) => {
@@ -18,16 +18,17 @@ function NewPost() {
       body,
       created_at: new Date(),
     });
+
     navigate('/');
   };
 
   return (
-    <div>
+    <div className="new-post">
       <h2>Inserir novo Post:</h2>
       <form onSubmit={(e) => createPost(e)}>
         <div className="form-control">
           <label htmlFor="title">
-            Título:
+            <p>Título:</p>
             <input
               type="text"
               name="title"
@@ -38,16 +39,17 @@ function NewPost() {
           </label>
 
           <label htmlFor="body">
-            Conteúdo:
-            <textarea name="body" id="body" placeholder="Digite o conteúdo" />
+            <p>Conteúdo:</p>
+            <textarea name="body" id="body" rows="10" placeholder="Digite o conteúdo" onChange={(e) => setBody(e.target.value)} />
           </label>
-          <input
-            type="submit"
-            value="Criar post"
-            className="btn"
-            onChange={(e) => setBody(e.target.value)}
-          />
         </div>
+        <button
+          type="submit"
+          value="Criar post"
+          className="btn"
+        >
+          Criar post
+        </button>
       </form>
     </div>
   );
