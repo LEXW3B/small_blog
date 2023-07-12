@@ -30,7 +30,7 @@ O projeto blog Fullstack foi criado visando estudar e criar um ambiente fullstac
 
 <b>O projeto utiliza React para a parte de frontend, NodeJS para a parte de backend com construção de uma API Restful, Docker para utilização do banco de dados (MySQL) com arquitetura MSC (model-service-controller).</b>
 
-Na página Home, mostra os posts dos usuários cadastrados via localstorage, com limite de caracteres no corpo de 150. Para mostrar o post inteiro sem limites, existe o botão "Leia mais". Ao entrar na página, irá ser feita uma requisição no banco de dados via API Node quer irá retornar todos os posts cadastrados no banco de dados naquele momento.
+Na página Home, mostra os posts dos usuários cadastrados via localstorage, com limite de caracteres no corpo de 150. Para mostrar o post inteiro sem limites, existe o botão "Leia mais". Ao entrar na página, irá ser feita uma requisição no banco de dados via API Node que irá retornar todos os posts cadastrados no banco de dados naquele momento.
 <br>
 
 Podemos cadastrar um novo post ao clicar no botão "Novo Post", onde iremos consumir uma rota post da API para cadastro dos dados no banco de dados.
