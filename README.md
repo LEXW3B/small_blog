@@ -1,4 +1,4 @@
-# Projeto Blog Fullstack
+# small_blog
 
 ## Resumo
 
